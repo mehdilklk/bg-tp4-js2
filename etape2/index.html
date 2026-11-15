@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRUD-Persons — Étape 2</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main id="table_container">
+    <table id="personnes">
+      <thead>
+        <tr><th class="col_number">N°</th><th>Nom</th><th>Prénom</th><th class="col_number">Points</th><th class="col_chkbox">Select</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row"><td class="col_number">1</td><td class="col_text">nom-1</td><td class="col_text">prenom-1</td><td class="col_number">5</td><td class="col_chkbox"><input type="checkbox" aria-label="Sélectionner la ligne 1"></td></tr>
+        <tr class="row"><td class="col_number">2</td><td class="col_text">nom-2</td><td class="col_text">prenom-2</td><td class="col_number">10</td><td class="col_chkbox"><input type="checkbox" aria-label="Sélectionner la ligne 2"></td></tr>
+        <tr class="row"><td class="col_number">3</td><td class="col_text">nom-3</td><td class="col_text">prenom-3</td><td class="col_number">15</td><td class="col_chkbox"><input type="checkbox" aria-label="Sélectionner la ligne 3"></td></tr>
+      </tbody>
+    </table>
+    <button type="button" id="ajouter">Ajouter</button>
+  </main>
+</body>
+</html>

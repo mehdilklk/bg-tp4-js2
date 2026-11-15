@@ -1,0 +1,21 @@
+/* Présentation du tableau de l'étape 1, réutilisée dans les étapes suivantes. */
+* { box-sizing: border-box; }
+body { font-family: Calibri, Arial, sans-serif; color: #222; margin: 30px; }
+#table_container { max-width: 850px; margin: 20px auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 9px; }
+th { background: #007db8; color: white; }
+.col_number, .col_chkbox { width: 10%; text-align: center; }
+.col_text { width: 35%; text-align: left; }
+#summary { background: #eee; padding: 10px; display: flex; justify-content: space-between; }
+#form_container { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-bottom: 4px; }
+#form_container label { display: flex; align-items: center; gap: 3px; }
+#form_container input { width: 130px; }
+/* Les classes des boutons sont introduites à l'étape 6 du TP. */
+.btn-add, .btn-consol, .btn-del { border: 0; padding: 8px 12px; color: white; cursor: pointer; }
+.btn-add { background: #00a900; }
+.btn-consol { background: #bd8900; }
+.btn-del { background: #eb0000; }
+#container_btn { display: flex; justify-content: flex-end; gap: 6px; margin-top: 8px; }
+#outils { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
+#message { margin: 8px 0 0; }

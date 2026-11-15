@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRUD-Persons — Étape 6</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main id="table_container">
+    <div id="form_container">
+      <label for="form_nom">Nom : <input id="form_nom" type="text"></label>
+      <label for="form_prenom">Prénom : <input id="form_prenom" type="text"></label>
+      <label for="form_points">Points : <input id="form_points" type="number" step="1"></label>
+      <button type="button" id="ajouter" class="btn-add">Ajouter</button>
+    </div>
+    <table id="personnes">
+      <thead>
+        <tr><th class="col_number">N°</th><th>Nom</th><th>Prénom</th><th class="col_number">Points</th><th class="col_chkbox">Select</th></tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div id="summary"><span id="nb_lignes">0 ligne(s)</span><span id="total">Total point(s) = 0</span></div>
+    <div id="container_btn">
+      <button type="button" id="console" class="btn-consol">Console Tableau</button>
+      <button type="button" id="supprimer" class="btn-del">Supprimer</button>
+    </div>
+    <div id="outils">
+      <label for="recherche">Rechercher :</label>
+      <input id="recherche" type="search" placeholder="Nom ou prénom">
+      <button type="button" id="tout">Tout sélectionner</button>
+      <button type="button" id="modifier">Modifier la personne sélectionnée</button>
+    </div>
+    <p>Pour modifier une personne, cochez sa ligne et saisissez ses nouvelles valeurs dans les champs.</p>
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
