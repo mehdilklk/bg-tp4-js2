@@ -1,40 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CRUD-Persons — Étape 6</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-Persons - Etape 6</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Script externe, chargé après le parsing du HTML grâce à "defer" -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <main id="table_container">
-    <div id="form_container">
-      <label for="form_nom">Nom : <input id="form_nom" type="text"></label>
-      <label for="form_prenom">Prénom : <input id="form_prenom" type="text"></label>
-      <label for="form_points">Points : <input id="form_points" type="number" step="1"></label>
-      <button type="button" id="ajouter" class="btn-add">Ajouter</button>
+
+    <div id="table_container">
+
+        <!-- Formulaire de saisie d'une nouvelle personne -->
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_prenom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field"/>
+            </div>
+            <button class="btn-add" onclick="doNewData()">Ajouter</button>
+        </div>
+
+        <!-- Tableau des personnes (les lignes sont générées par JavaScript) -->
+        <table id="persons_table">
+            <thead>
+                <tr>
+                    <th class="col_number">N°</th>
+                    <th class="col_text">Nom</th>
+                    <th class="col_text">Prénom</th>
+                    <th class="col_number">Points</th>
+                    <th class="col_chkbox">Select</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
+
+        <!-- Espace "Résumé" -->
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Total point(s)= 0</p>
+        </div>
+
+        <!-- Boutons de contrôle -->
+        <div id="container_btn">
+            <button class="btn-consol" onclick="consoleTableau()">Console Tableau</button>
+            <button class="btn-del" onclick="deleteRow()">Supprimer</button>
+        </div>
+
     </div>
-    <table id="personnes">
-      <thead>
-        <tr><th class="col_number">N°</th><th>Nom</th><th>Prénom</th><th class="col_number">Points</th><th class="col_chkbox">Select</th></tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    <div id="summary"><span id="nb_lignes">0 ligne(s)</span><span id="total">Total point(s) = 0</span></div>
-    <div id="container_btn">
-      <button type="button" id="console" class="btn-consol">Console Tableau</button>
-      <button type="button" id="supprimer" class="btn-del">Supprimer</button>
-    </div>
-    <div id="outils">
-      <label for="recherche">Rechercher :</label>
-      <input id="recherche" type="search" placeholder="Nom ou prénom">
-      <button type="button" id="tout">Tout sélectionner</button>
-      <button type="button" id="modifier">Modifier la personne sélectionnée</button>
-    </div>
-    <p>Pour modifier une personne, cochez sa ligne et saisissez ses nouvelles valeurs dans les champs.</p>
-    <p id="message" role="status" aria-live="polite"></p>
-  </main>
+
 </body>
 </html>

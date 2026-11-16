@@ -1,21 +1,126 @@
-/* Présentation du tableau de l'étape 1, réutilisée dans les étapes suivantes. */
-* { box-sizing: border-box; }
-body { font-family: Calibri, Arial, sans-serif; color: #222; margin: 30px; }
-#table_container { max-width: 850px; margin: 20px auto; }
-table { width: 100%; border-collapse: collapse; }
-th, td { border: 1px solid #ddd; padding: 9px; }
-th { background: #007db8; color: white; }
-.col_number, .col_chkbox { width: 10%; text-align: center; }
-.col_text { width: 35%; text-align: left; }
-#summary { background: #eee; padding: 10px; display: flex; justify-content: space-between; }
-#form_container { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-bottom: 4px; }
-#form_container label { display: flex; align-items: center; gap: 3px; }
-#form_container input { width: 130px; }
-/* Les classes des boutons sont introduites à l'étape 6 du TP. */
-.btn-add, .btn-consol, .btn-del { border: 0; padding: 8px 12px; color: white; cursor: pointer; }
-.btn-add { background: #00a900; }
-.btn-consol { background: #bd8900; }
-.btn-del { background: #eb0000; }
-#container_btn { display: flex; justify-content: flex-end; gap: 6px; margin-top: 8px; }
-#outils { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
-#message { margin: 8px 0 0; }
+/* ===== Conteneur global : centré, police Calibri en premier choix ===== */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#table_container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+/* ===== Formulaire ===== */
+#form_container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+.form_group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+}
+
+.form_label {
+    font-weight: bold;
+}
+
+.form_field {
+    flex: 1;
+    min-width: 0;
+    padding: 4px;
+    border: 1px solid #555;
+}
+
+/* ===== Tableau ===== */
+#persons_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#persons_table th {
+    background-color: #007bbd;
+    color: #fff;
+    padding: 12px 8px;
+}
+
+#persons_table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.col_number {
+    width: 70px;
+    text-align: center;
+}
+
+.col_text {
+    text-align: left;
+}
+
+th.col_text {
+    text-align: center;
+}
+
+.col_chkbox {
+    width: 80px;
+    text-align: center;
+}
+
+/* ===== Espace résumé ===== */
+#container_summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #f0f0f0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+}
+
+#container_summary p {
+    margin: 10px 0;
+}
+
+/* ===== Boutons ===== */
+#container_btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 12px;
+}
+
+button {
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.btn-add {
+    background-color: #00b300;
+}
+
+.btn-consol {
+    background-color: #bf8f00;
+}
+
+.btn-del {
+    background-color: #ff0000;
+}
